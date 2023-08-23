@@ -24,6 +24,8 @@ def sorted_result_list(list_operations):
 
 
 def operation_details(input_str):
+    if input_str is None:
+        return "Нет информации"
     words = input_str.split()
     number = words[-1]
     name_card = " ".join(words[:-1])
