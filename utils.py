@@ -23,3 +23,14 @@ def sorted_result_list(list_operations):
     return sorted(list_operations, key=date_time, reverse=True)
 
 
+def operation_details(input_str):
+    words = input_str.split()
+    number = words[-1]
+    name_card = " ".join(words[:-1])
+    if len(number) == 20:
+        return f"{name_card} **{number[-4:]}"
+    return f"{name_card} {number[:4]} {number[4:6]}** **** {number[-4:]}"
+
+
+
+
