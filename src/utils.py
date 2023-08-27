@@ -15,7 +15,7 @@ def get_executed_operations(list_operations):
     return result_list
 
 
-def date_time(x)->datetime:
+def date_time(x) -> datetime:
     return datetime.strptime(x["date"], '%Y-%m-%dT%H:%M:%S.%f')
 
 
@@ -34,8 +34,8 @@ def operation_details(input_str):
     return f"{name_card} {number[:4]} {number[4:6]}** **** {number[-4:]}"
 
 
-def date_to_str(input_str):
-    return date_time(input_str).strftime("%d.%m.%Y")
+def date_to_str(input_dict):
+    return date_time(input_dict).strftime("%d.%m.%Y")
 
 
 
